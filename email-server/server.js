@@ -7,7 +7,7 @@ require('dotenv').config();
 
 // Firebase Admin SDK para acessar Firestore
 const admin = require('firebase-admin');
-const serviceAccount = require('./serviceAccountKey.json'); 
+const serviceAccount = require('./serviceAccountKey.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -65,6 +65,8 @@ function generatePDF(checkins, title = 'Histórico de Check-in/Check-out') {
 app.post('/send-email', async (req, res) => {
   try {
     const { to, subject, text, pdfBase64 } = req.body;
+    console.log('Recebendo solicitação de envio de e-mail...');
+    console.log('Dados recebidos:', { to, subject, text });
 
     const mailOptions = {
       from: process.env.EMAIL_FROM,
@@ -80,7 +82,9 @@ app.post('/send-email', async (req, res) => {
       ],
     };
 
+    console.log('Enviando e-mail...');
     await transporter.sendMail(mailOptions);
+    console.log('E-mail enviado com sucesso!');
     res.status(200).send('E-mail enviado com sucesso!');
   } catch (error) {
     console.error('Erro ao enviar e-mail:', error);
