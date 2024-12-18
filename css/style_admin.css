@@ -10,24 +10,27 @@ body {
 .title {
   font-size: 1.75rem;
   color: #1e1e1e;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
   
 .input-container {
   width: 100%;
-  max-width: 21.875rem;
+  max-width: 21rem;
   margin-bottom: 0.9375rem;
   position: relative;
 }
-  
+
 .input {
-  margin-top: 0.5rem;
-  padding: 0.8rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.4rem;
+  width: 16.5rem;
+  max-width: 100%;
+  border: none;
+  border-bottom: 0.125rem solid var(--cor-input);
   outline: none;
+  font-size: 1rem;
+  padding: 0.625rem 0;
+  margin-top:  0.75rem;
+  color: var(--cor-textos);
 }
 
 .form-container {
@@ -67,7 +70,6 @@ body {
 
 .button:hover {
   background-color: var(--cor-botao-pressionado);
-  transform: scale(1.05);
 }
   
 .button:active {
@@ -77,7 +79,7 @@ body {
 .button-hidden {
   background-color: var(--cor-botao);
   padding: 0.6rem 1.5rem;
-  font-size: 0.9rem;
+  font-size: 1.125rem;
   border: none;
   border-radius: 1.5rem;
   color: #fff;

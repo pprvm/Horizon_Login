@@ -32,20 +32,21 @@
 
       <!-- Conteúdo principal -->
       <div class="card-right">
+        <h1 class="title">Painel Administrativo</h1>
         <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
 
         <!-- Botões principais -->
         <div id="button-container" class="nav-buttons">
-          <button class="button" onclick="showSection('register-section')">Cadastrar Novo Usuário</button>
-          <button class="button" onclick="showSection('reset-section')">Redefinir Senha de Usuário</button>
-          <button class="button" onclick="showSection('manage-section')">Administrar Usuários Existentes</button>
+          <button class="button" onclick="showSection('register-section')">Cadastrar Novo Administrador</button>
+          <button class="button" onclick="showSection('reset-section')">Redefinir Senha do Usuário</button>
+          <button class="button" onclick="showSection('manage-section')">Administradores Existentes</button>
         </div>        
 
         <!-- Cadastro de Novo Usuário -->
         <div id="register-section" class="section hidden">
           <h2 class="section-title">Cadastrar Novo Usuário</h2>
           <div class="form-container">
-            <input id="new-email" class="input" type="email" placeholder="Digite o Email" />
+            <input id="new-email" class="input" type="email" placeholder="Digite o E-mail" />
             <input id="new-password" class="input" type="password" placeholder="Digite a Senha" />
             <div id="especial"> 
               <button class="button-hidden" onclick="registerUser()">Cadastrar</button>
@@ -58,7 +59,7 @@
         <div id="reset-section" class="section hidden">
           <h2 class="section-title">Redefinir Senha de Usuário</h2>
           <div class="form-container">
-            <input id="reset-email" class="input" type="email" placeholder="E-mail do Usuário" />
+            <input id="reset-email" class="input" type="email" placeholder="E-mail do Usuário Administrador" />
             <div id="especial"> 
               <button class="button-hidden" onclick="resetPassword()">Redefinir Senha</button>
               <button class="button-hidden" onclick="goBack()">Voltar</button>
@@ -73,7 +74,7 @@
             <table>
               <thead>
                 <tr>
-                  <th>Email</th>
+                  <th>E-mail</th>
                   <th>Ações</th>
                 </tr>
               </thead>

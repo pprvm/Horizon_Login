@@ -66,7 +66,7 @@
 .admin-link {
   display: block;
   font-size: 0.875rem;
-  margin-top: 0.3rem;
+  margin-top:  0.75rem;
   color: #51735a;
 
   text-decoration: none;
@@ -79,16 +79,6 @@
   text-decoration: underline;
 }
 
-#voltar {
-  margin-top: 0.6rem;
-  margin-bottom: 0.4rem;
-  font-size: 0.8rem;
-}
-
-#voltar::after {
-  content: "ㅤ";
-}
-
 .button {
   background-color: var(--cor-botao);
   color: #fff;
@@ -98,7 +88,7 @@
   border-radius: 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  margin-top: 0.3125rem;
+  margin-top:  0.8rem;
 }
 
 .button:hover {
