@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_index.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>Check-in/out</title>
+    <script type="module" src="scripts/index.js" defer></script>
+  </head>
+  <body>
+    <div class="check-in-page">
+      <div class="card">
+        <div class="card-left">
+          <img class="logo" src="img/logo.png" alt="Logo" />
+          <div class="footer-container">
+            <p class="footer-text">
+              Desenvolvido por Helius<br />
+              2024 © Direitos reservados à Horizon
+            </p>
+          </div>
+        </div>
+        <div class="card-right">
+          <!-- Título clicável para mostrar check-outs pendentes -->
+          <h1 class="title" onclick="showPendingCheckouts()" style="cursor: pointer;">Check-in/out</h1>
+
+          <!-- Formulário de Check-in/Check-out -->
+          <div id="checkin-form">
+            <div class="input-container">
+              <input id="id-input" class="input" type="text" placeholder="Digite seu ID ou E-mail" />
+            </div>
+            <div class="input-container">
+              <input id="password-input" class="input" type="password" placeholder="Digite sua senha" />
+            </div>
+            <a href="login.html" class="admin-link">Fazer login como administrador?</a>
+            <button class="button" onclick="handleCheckin()">Ok</button>
+          </div>
+
+          <!-- Seção de Redefinição de Senha -->
+          <div id="forgot-password-section" class="hidden">
+            <h2 class="title">Redefinir Senha</h2>
+            <div class="input-container">
+              <input id="reset-email" class="input" type="email" placeholder="Digite seu e-mail" />
+            </div>
+            <button class="button" onclick="sendPasswordReset()">Enviar Link de Redefinição</button>
+            <button class="button" onclick="goBackToCheckin()">Voltar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para mostrar a tabela de check-outs pendentes -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2 id="title-modal">Check-out Pendente</h2>
+        <div class="tableCrop">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Setor</th>
+                <th>Entrada</th>
+              </tr>
+            </thead>
+            <tbody id="pending-checkouts-table">
+              <!-- Os dados serão inseridos dinamicamente aqui -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

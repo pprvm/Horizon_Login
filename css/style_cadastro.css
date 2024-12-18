@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@import url("./default/default.css"); 
+@import url("./default/tabela.css");
+
+body {
+  display: none;
+}
+
+.title {
+  font-size: 1.75rem;
+  color: var(--cor-textos);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+  
+.input-container {
+  width: 100%;
+  max-width: 21.875rem;
+  margin-bottom: 0.9rem;
+  position: relative;
+}
+  
+.input {
+  width: 20.625rem;
+  max-width: 100%;
+  border: none;
+  border-bottom: 0.125rem solid var(--cor-input);
+  outline: none;
+  font-size: 1rem;
+  padding: 0.625rem 0;
+  color: var(--cor-textos);
+}
+  
+.input::placeholder {
+  color: #828282;
+  opacity: 1;
+}
+  
+.input:focus::placeholder {
+  opacity: 0;
+}
+  
+.button {
+  background-color: var(--cor-botao);
+  color: #fff;
+  font-size: 1.125rem;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 0.625rem;
+}
+  
+.button:hover {
+  background-color: var(--cor-botao-pressionado);
+  transform: scale(1.05);
+}
+  
+.button:active {
+  transform: scale(0.95);
+}
+  
+.hidden {
+  display: none;
+}
+  
+.confirmation-text {
+  font-size: 1.125rem;
+  color: #51735a;
+  text-align: center;
+  margin-bottom: 1.875rem;
+  line-height: 1.5;
+}
+  

@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+@import url("./default/default.css"); 
+@import url("./default/tabela.css");
+
+body {
+  display: none;
+}
+
+.title {
+  font-size: 1.75rem;
+  color: #1e1e1e;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+  
+.input-container {
+  width: 100%;
+  max-width: 21.875rem;
+  margin-bottom: 0.9375rem;
+  position: relative;
+}
+  
+.input {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  outline: none;
+}
+
+.form-container {
+  display:inline-block;
+  margin-top: 1.1rem;
+  height: 200px;
+}
+  
+#especial {
+  margin: 1.1rem 0 1rem 0;
+}
+
+.input::placeholder {
+  color: #828282;
+  opacity: 1;
+}
+  
+.input:focus::placeholder {
+  opacity: 0;
+}
+  
+.input:focus {
+  border-bottom: 0.125rem solid #3a5945;
+}
+
+.button {
+  background-color: var(--cor-botao);
+  padding: 0.6rem 1.5rem;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 1.5rem;
+  color: #fff;
+  background-color: #51735a;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: var(--cor-botao-pressionado);
+  transform: scale(1.05);
+}
+  
+.button:active {
+  transform: scale(0.95);
+}
+
+.button-hidden {
+  background-color: var(--cor-botao);
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 1.5rem;
+  color: #fff;
+  background-color: #51735a;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-hidden:hover {
+  background-color: var(--cor-botao-pressionado);
+  transform: scale(1.05);
+}
+  
+.button-hidden:active {
+  transform: scale(0.95);
+}
+  
+.info-text {
+  font-size: 1rem;
+  color: #51735a;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+#Login {
+  display: block;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9375rem;
+  margin-bottom: 1.875rem;
+}
+
+.nav-buttons .button {
+  background-color: #51735a;
+  color: #fff;
+  padding: 0.625rem 1.25rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  max-width: 18.75rem;
+  text-align: center;
+}
+
+.nav-buttons .button:hover {
+  background-color: #3a5945;
+  transform: scale(1.05);
+}
+
+.section {
+  margin-top: 1.875rem;
+}
+
+.table-container {
+  width: 110%;
+  height: 18rem;
+  padding: 0;
+  margin: 1.875rem 0 0 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 0.9375rem;
+  box-shadow: 0rem 0.25rem 1.25rem rgba(0, 0, 0, 0.118);
+  outline: none;
+  transform: scale(0.9);
+  transform-origin: top left;
+}
+
+#register-section {
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0px 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  width: 27rem;
+  height: 19rem;
+}
+
+#reset-section {
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0px 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  width: 27rem;
+  height: 16rem;
+}
+
+#manage-section {
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0px 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  width: 28rem;
+  height: 28rem;
+}
+
+.section-title {
+  color: #333;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+thead {
+  background-color: var(--cor-menu);
+  color: black;
+}
+
+th, td {
+  border: 0.020rem solid #51735a;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+th {
+  background-color: #a8d3b1;
+  color: #1e1e1e;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e0f0e9;
+}
+
+th:first-child {
+  border-top-left-radius: 0.75rem;
+}
+
+th:last-child {
+  border-top-right-radius:0.75rem;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 0.75rem;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 0.75rem;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #d9534f;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.delete-button:hover {
+  color: #c9302c;
+}

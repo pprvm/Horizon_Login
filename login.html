@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style_login.css" />
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  <title>Login</title>
+  <script type="module" src="scripts/login.js"></script>
+</head>
+
+<body>
+  <div class="check-in-page">
+    <div class="card">
+      <div class="card-left">
+        <a href="index.html">
+          <img class="logo" src="img/logo.png" alt="Logo" />
+        </a>
+        <div class="footer-container">
+          <p class="footer-text">
+            Desenvolvido por Helius<br />
+            2024 © Direitos reservados à Horizon
+          </p>
+        </div>
+      </div>
+      <div class="card-right">
+        <h1 class="title">Login</h1>
+
+        <!-- Formulário de Login -->
+        <div id="signInForm">
+          <div class="input-container">
+            <input id="email" class="input" type="email" placeholder="Usuário" />
+          </div>
+          <div class="input-container">
+            <input id="password" class="input" type="password" placeholder="Senha" />
+          </div>
+          <a href="#" class="admin-link" onclick="showForgotPasswordSection()">Esqueci minha senha</a>
+          <a href="index.html" id="voltar" class="admin-link" rel="prev">< Check-in/out</a>
+          <button class="button" id="id-input" onclick="validateLogin()">Entrar</button>
+        </div>
+
+        <!-- Seção de Redefinição de Senha -->
+        <div id="forgot-password-section" class="hidden">
+          <h2>Redefinir Senha</h2>
+          <div class="input-container">
+            <input id="reset-email" class="input" type="email" placeholder="Digite seu e-mail" />
+          </div>
+          <button class="button" onclick="sendPasswordReset()">Enviar Link de Redefinição</button>
+          <button class="button" onclick="goBackToLogin()">⭠ Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

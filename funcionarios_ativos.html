@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style_ativos.css" />
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <title>Funcionários Ativos</title>
+  <script type="module" src="scripts/ativos.js" defer></script>
+  <script type="module" src="scripts/authGuard.js" defer></script>
+</head>
+<body>
+  <div class="check-in-page">
+    <div class="card">
+      <div class="card-left">
+        <img class="logo" src="img/logo.png" alt="Logo" onclick="window.location.href='home.html'" />
+        <div class="caixa-menu">
+          <div class="menu">
+            <button class="menu-item" onclick="window.location.href='cadastro_funcionarios.html'">Cadastro de Funcionário</button>
+            <button class="menu-item" onclick="window.location.href='funcionarios_ativos.html'">Quadro de Funcionários</button>
+            <button class="menu-item" onclick="window.location.href='historico.html'">Histórico de Check-in/out</button>
+            <button class="menu-item" onclick="window.location.href='admin.html'">Painel Administrativo</button>
+            <button class="menu-item logout" onclick="confirmLogout()">Sair</button>
+          </div>
+        </div>
+        <div class="footer-container">
+          <p class="footer-text">Desenvolvido por Helius<br />2024 © Direitos reservados à Horizon</p>
+        </div>
+      </div>
+      <div class="card-right">
+        <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+        <h1 class="title">Funcionários Ativos</h1>
+        <div class="search-container">
+          <input
+            id="search-input"
+            class="input"
+            type="text"
+            placeholder="Buscar por Nome ou ID..."
+            onkeydown="if (event.key === 'Enter') searchEmployees()"
+          />
+          <button id="search-button" class="button" onclick="searchEmployees()"><img class="lupa" src="img/lupa_icone.png" alt="Ícone Lupa"></button>
+        </div>
+        <div class="tableCrop">
+
+          <table class="employees-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Setor</th>
+                <th>E-mail</th>
+                <th>Celular</th>
+                <th>Senha</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="employees-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

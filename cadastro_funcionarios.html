@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_cadastro.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>Cadastro de Funcionário</title>
+    <script type="module" src="scripts/cadastro.js"></script>
+    <script type="module" src="scripts/authGuard.js" defer></script>
+  </head>
+  <body>
+    <div class="check-in-page">
+      <div class="card">
+        <div class="card-left">
+          <img class="logo" src="img/logo.png" alt="Logo" onclick="window.location.href='home.html'" />
+          <div class="caixa-menu">
+            <div class="menu">
+              <button class="menu-item" onclick="window.location.href='cadastro_funcionarios.html'">Cadastro de Funcionário</button>
+              <button class="menu-item" onclick="window.location.href='funcionarios_ativos.html'">Quadro de Funcionários</button>
+              <button class="menu-item" onclick="window.location.href='historico.html'">Histórico de Check-in/out</button>
+              <button class="menu-item" onclick="window.location.href='admin.html'">Painel Administrativo</button>
+              <button class="menu-item logout" onclick="confirmLogout()">Sair</button>
+          </div>
+          </div>
+          <div class="footer-container">
+            <p class="footer-text">
+              Desenvolvido por Helius<br />
+              2024 © Direitos reservados à Horizon 
+            </p>
+          </div>
+        </div>
+        <div class="card-right">
+          <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+        <div class="card-right">
+          <h1 class="title">Cadastro de Funcionário</h1>
+          <form id="employeeForm">
+            <div class="input-container">
+              <input id="name" class="input" type="text" placeholder="Nome: Horizon" required />
+            </div>
+            <div class="input-container">
+              <input id="sector" class="input" type="text" placeholder="Setor: Funcionário " required />
+            </div>
+            <div class="input-container">
+              <input id="email" class="input" type="email" placeholder="E-mail: email.example@mail.com" required />
+            </div>
+            <div class="input-container">
+              <input id="password" class="input" type="password" placeholder="Senha: ********" required />
+            </div>            
+            <div class="input-container">
+              <input id="phone" class="input" type="text" placeholder="Celular: (99) 9999-9999 " required />
+            </div>
+            <button type="submit" class="button">Cadastrar</button>
+          </form>
+          <div id="confirmation" class="hidden">
+            <p id="generated-id" class="confirmation-text"></p>
+            <button class="button" onclick="resetForm()">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

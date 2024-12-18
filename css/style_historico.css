@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+@import url("./default/default.css"); 
+@import url("./default/tabela.css");
+  
+body {
+  display: none;
+}
+
+.title {
+  font-size: 1.75rem;
+  color: var(--cor-textos);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;  
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 35rem;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  border-bottom: 0.125rem solid var(--cor-input);
+  outline: none;
+  font-size: 1rem;
+  padding: 0.625rem 0;
+  margin-right: 0.625rem;
+}
+
+.button {
+  background-color: var(--cor-botao);
+  padding: 0.6rem 1.5rem;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 1.5rem;
+  color: #fff;
+  background-color: #51735a;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: var(--cor-botao-pressionado);
+}
+
+.lupa {
+  max-width: 1.0625rem;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+
+#pdf_image{
+  max-width: 3.0625rem;
+  text-align: center;
+  margin-top: 0.15rem;
+}
+
+#class {
+  max-width: 0.4375rem;
+  max-height: 0.4375rem;
+}
+
+th, td {
+  border: 0.020rem solid #51735a;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+th {
+  background-color: #a8d3b1;
+  color: #1e1e1e;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e0f0e9;
+}
+
+th:first-child {
+  border-top-left-radius: 0.75rem;
+}
+
+th:last-child {
+  border-top-right-radius: 0.75rem;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 0.75rem;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 0.75rem;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #d9534f;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.delete-button:hover {
+  color: #c9302c;
+}
+
+.sort-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.sort-button:hover {
+  color: #51735a;
+}
+
+#send-pdf-button {
+  margin-left: 0.8rem;
+  padding: 0.5rem 1.2rem;
+}
+
+#email_image {
+  max-width: 1.3rem;
+  text-align: center;
+  margin: 0.15rem 0 0 0;
+}
+
