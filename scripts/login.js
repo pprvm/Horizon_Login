@@ -30,6 +30,17 @@ document.getElementById('signInForm').addEventListener('submit', (event) => {
     });
 });
 
+// Captura o evento de pressionar Enter
+document.getElementById('email').addEventListener('keydown', handleEnterKey);
+document.getElementById('password').addEventListener('keydown', handleEnterKey);
+
+function handleEnterKey(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    document.getElementById('signInForm').dispatchEvent(new Event('submit'));
+  }
+}
+
 // Verificar Autenticação
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -96,8 +107,6 @@ function validateLogin() {
       alert('Erro ao fazer login: ' + error.message);
     });
 }
-
-
 
 // Exporta funções para uso no HTML
 window.showForgotPasswordSection = showForgotPasswordSection;
