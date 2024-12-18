@@ -1,8 +1,9 @@
 // Importa as funções necessárias do Firebase
-import { auth, db } from './firebaseConfig.js';
+import { db } from './firebaseConfig.js';
 import { collection, getDocs, onSnapshot, updateDoc, deleteDoc, doc, query, where } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
 
 async function generateAndSendPDF() {
+  alert ("Enviando e-mail...");
   try {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
