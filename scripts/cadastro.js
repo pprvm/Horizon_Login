@@ -41,6 +41,28 @@ async function generateUniqueID() {
   return newID;
 }
 
+// Formatação automática do telefone
+document.getElementById('phone').addEventListener('input', (e) => {
+  let phone = e.target.value.replace(/\D/g, ''); // Remove todos os não dígitos
+  if (phone.length > 2) {
+    phone = `(${phone.slice(0, 2)}) ${phone.slice(2)}`;
+  }
+  if (phone.length > 10) {
+    phone = `${phone.slice(0, 10)}-${phone.slice(10, 14)}`;
+  }
+  e.target.value = phone;
+});
+
+// Validação do e-mail
+document.getElementById('email').addEventListener('input', (e) => {
+  const email = e.target.value;
+  if (email && !email.includes('@')) {
+    e.target.setCustomValidity('O e-mail deve conter um @.');
+  } else {
+    e.target.setCustomValidity('');
+  }
+});
+
 // Manipula o envio do formulário
 document.getElementById('employeeForm').addEventListener('submit', async (e) => {
   e.preventDefault();

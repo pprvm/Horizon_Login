@@ -7,7 +7,7 @@ require('dotenv').config();
 
 // Firebase Admin SDK para acessar Firestore
 const admin = require('firebase-admin');
-const serviceAccount = require('./serviceAccountKey.json'); // Certifique-se de ter esse arquivo
+const serviceAccount = require('./serviceAccountKey.json'); 
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
