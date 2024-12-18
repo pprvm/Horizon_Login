@@ -41,7 +41,7 @@ async function generateAndSendPDF() {
     const pdfBase64 = doc.output('datauristring').split(',')[1];
 
     // Envia a requisição ao servidor
-    const response = await fetch('http://localhost:3000/send-email', {
+    const response = await fetch('https://horizon-e9r9.onrender.com/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
