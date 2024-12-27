@@ -28,5 +28,5 @@ Horizon Login é um sistema web desenvolvido para facilitar o gerenciamento de f
 - Conta no Firebase com um projeto configurado.
 - Clonar este repositório:
   ```bash
-  git clone https://github.com/EmanuelleMeireles/Horizon_Login.git
+  git clone [https://github.com/EmanuelleMeireles/Horizon_Login](https://github.com/pprvm/Horizon_Login).git
   cd Horizon_Login
